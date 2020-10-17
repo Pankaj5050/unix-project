@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # File : guessinggame.sh
 echo "How many files are in the current directory"
-echo "Enter your guess"
+echo "Enter your guess mate"
 read response
 
 num=$(find . -maxdepth 1 -type f | wc -l)
