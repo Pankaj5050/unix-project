@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # File : guessinggame.sh
 echo "How many files are in the current directory"
-echo "Enter your guess mate"
+echo "Enter your guess"
 read response
-
 num=$(find . -maxdepth 1 -type f | wc -l)
-while [[ $response -ne 0 ]] && [[ $response -gt 0 ]]
-   do   
+function check(){
+while [[ $response -eq 0 ]] || [[ $response -gt 0 ]]
+   do
      if [[ $response -lt $num ]]
       then
        echo "Guess too low"
@@ -22,3 +22,5 @@ while [[ $response -ne 0 ]] && [[ $response -gt 0 ]]
        read response
      fi
    done
+}
+check
